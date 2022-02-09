@@ -46,12 +46,7 @@ async def on_ready():
     for button in data:
         view.add_item(FaqButton(label=button, message=data[button]))
 
-    
-    with open('mensagem.json') as fp:
-        bodyMessage = json.load(fp)
-
-    await channel.send(bodyMessage, view=view)
-    # await channel.send(f'Bem-vindo ao Canal do Discord do Bankless Brasil! Veja nosso FAQ:', view=view)
+    await channel.send(f'Bem-vindo ao Canal do Discord do Bankless Brasil! Veja nosso FAQ:', view=view)
     print('Message sent')
 
 
